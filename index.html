@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>XNK Gym OS -- Member</title>
+<meta name="description" content="XNK Gym OS -- Halaman member: kartu member, riwayat, check-in.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="canonical" href="https://member.xnkproduction.web.id/">
+
+<!-- Mulai handshake DNS/TLS ke Apps Script SEKARANG, paralel sama parsing
+     halaman kecil ini -- bukan nunggu baru mulai pas <iframe> di bawah
+     ditemukan parser. -->
+<link rel="preconnect" href="https://script.google.com">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="XNK Gym OS">
+<meta property="og:title" content="XNK Gym OS -- Member">
+<meta property="og:description" content="Kartu member, riwayat, check-in.">
+<meta property="og:url" content="https://member.xnkproduction.web.id/">
+<meta property="og:image" content="https://member.xnkproduction.web.id/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="XNK Gym OS -- Member">
+<meta name="twitter:description" content="Kartu member, riwayat, check-in.">
+<meta name="twitter:image" content="https://member.xnkproduction.web.id/og-image.png">
+
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0A0A0A; }
+  iframe { position: fixed; inset: 0; width: 100%; height: 100%; border: 0; }
+  #wrapLoading {
+    position: fixed; inset: 0; z-index: 2; display: flex; align-items: center; justify-content: center;
+    background: #0A0A0A; color: rgba(255,255,255,0.55); font-size: 13px; font-weight: 600;
+  }
+  #wrapLoading .spinner {
+    width: 22px; height: 22px; margin-right: 10px; border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.15); border-top-color: rgba(255,255,255,0.65);
+    animation: wrapSpin 0.8s linear infinite;
+  }
+  @keyframes wrapSpin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<!-- ?view=member -- MemberPage.html (GAS) urus login sendiri (nomor WA,
+     tanpa password, lihat docs/ARCHITECTURE.md), tanpa lock overlay
+     ataupun navigasi top-level sama sekali -- beda dari Admin/Owner,
+     halaman ini tidak butuh param tambahan apa pun. -->
+<div id="wrapLoading"><div class="spinner"></div>Memuat...</div>
+<iframe
+  src="https://script.google.com/macros/s/AKfycbyPsGZUY8C7uplUdOzQ7ejxpRlMeojonuG0FwJnJTlJa8gBUUDCQqzL7QGdeeUwN2cSag/exec?view=member"
+  allow="clipboard-write"
+  title="XNK Gym OS -- Member"
+  onload="document.getElementById('wrapLoading').style.display='none'"
+></iframe>
+</body>
+</html>
